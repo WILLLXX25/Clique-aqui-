@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedido para Yara</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #ff7aa3);
+      text-align: center;
+      padding: 40px 20px;
+      color: #3a0e2b;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #b0004b;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+    .buttons {
+      margin-top: 30px;
+    }
+    button {
+      background-color: #ff497c;
+      border: none;
+      color: white;
+      padding: 16px 40px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      margin: 10px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px #ff5e95;
+      font-weight: 700;
+    }
+    button:hover {
+      background-color: #e53e6f;
+    }
+    #no-msg {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      color: #b33a57;
+      font-weight: 700;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Yara 💖</h1>
+  <p>
+    Desde que você entrou na minha vida, tudo ficou mais bonito e especial.<br/>
+    Quero caminhar ao seu lado, viver momentos bobos, dividir sonhos, risadas, planos e abraços.<br/>
+    Então, agora só falta uma coisa...<br/><br/>
+    <strong>Quer namorar comigo?</strong>
+  </p>
+
+  <div class="buttons">
+    <button id="btn-sim">✅ Sim</button>
+    <button id="btn-nao">❌ Não</button>
+  </div>
+
+  <div id="no-msg">Tem certeza? 🥺 Porque meu coração já é seu...</div>
+
+  <script>
+    const btnSim = document.getElementById('btn-sim');
+    const btnNao = document.getElementById('btn-nao');
+    const noMsg = document.getElementById('no-msg');
+
+    btnSim.onclick = () => {
+      const number = "5592993231406";
+      const message = encodeURIComponent("Agora somos oficialmente um casal! ❤️ Te amo! — Willian 😍");
+      window.location.href = `https://wa.me/${number}?text=${message}`;
+    };
+
+    btnNao.onclick = () => {
+      noMsg.style.display = 'block';
+    };
+  </script>
+
+</body>
+</html>
